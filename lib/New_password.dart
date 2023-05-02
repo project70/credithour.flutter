@@ -17,6 +17,7 @@ class Newpassword extends StatelessWidget
                   Text('New Password',
                     style: TextStyle(
                       fontSize: 17.0,
+                      color: Colors .black,
                     ),
                   ),
                   SizedBox(
@@ -30,18 +31,19 @@ class Newpassword extends StatelessWidget
                   ),
                   SizedBox(
                     height: 20.0,),
-              Container(
-                width: double.infinity,
-                color: Colors.black,
-                child: MaterialButton(onPressed: (){},
-                  child: Text('Save',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
+                  Container(
+                    width: double.infinity,
+                    color: Colors.black,
+                    child: MaterialButton(onPressed: (){},
+                      child: Text('save',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
 
+                      ),
+                    ),
                   ),
-                ),
-              ),
+             
 
                 ],
           ),

@@ -3,9 +3,17 @@
 
 
 
-
+import 'package:credithour/Login_Screen.dart';
 import 'package:credithour/New_password.dart';
+import 'package:credithour/code.dart';
+import 'package:credithour/forgot%20password.dart';
+import 'package:credithour/home%20screen%20..dart';
 import 'package:flutter/material.dart';
+
+import 'المواد.dart';
+import 'تسجيل المواد.dart';
+import 'home.dart';
+import 'مواد مسجلة.dart';
 
 void main()
 {
@@ -18,7 +26,11 @@ class MyApp extends StatelessWidget
   Widget build(BuildContext context)
  {
    return MaterialApp(
-     home:Newpassword(),
+     debugShowCheckedModeBanner: false,
+
+     home:mmm(),
+
+
    );
  }
 

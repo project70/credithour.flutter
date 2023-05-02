@@ -1,36 +1,44 @@
+
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget
-{g
+{
   var nameController = TextEditingController();
   var visiblePasswordController = TextEditingController();
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
+      backgroundColor: Colors.white,
 
       body: Padding(
 
         padding: const EdgeInsets.all(20.0),
+
         child:SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+
             children: [
               SizedBox(
                 height: 80.0,
               ),
               Text(
-                'Username',
+                'Logn in',
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 22,
                   fontWeight: FontWeight.w500
                 ),
+              ),
+              SizedBox(
+                height: 80.0,
               ),
               TextFormField(
                 controller: nameController,
                 keyboardType:TextInputType.name ,
                 decoration: InputDecoration(
                   hintText: 'Type your username',
+
                   prefixIcon: Icon(
                     Icons.person
                   ),
@@ -39,13 +47,6 @@ class LoginScreen extends StatelessWidget
               ),
               SizedBox(
                 height: 50.0,
-              ),
-              Text(
-                'Password',
-                style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500
-                ),
               ),
               TextFormField(
                 controller: visiblePasswordController,
@@ -62,46 +63,52 @@ class LoginScreen extends StatelessWidget
                   border:OutlineInputBorder(),
                 ),
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(onPressed: (){}, child: Text('Forgot password?',style: TextStyle(fontSize: 18,),),
+                    ),
+                ],
+              ),
               SizedBox(
                 height:50.0 ,
               ),
               Container(
-                width: double.infinity,
-                color: Colors.black,
-                child: MaterialButton(
-                  onPressed: ()
-                  {
-                    print (nameController.text);
-                    print (visiblePasswordController.text);
-                  },
-
-                child: Text(
-                   'Login',
-                   style: TextStyle(
-                       color: Colors.white
-                  ),
-
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0,),
+                  color: Colors.black,
                 ),
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(onPressed: (){}, child:
+                    Text('                                      LOGN IN                                         '),
+                    ),
+
+                  ],
+                ),
               ),
               SizedBox(
-                height:20.0 ,
+                height:5.0 ,
               ),
-             Row(
-               mainAxisAlignment: MainAxisAlignment.center,
-               children: [
-                 TextButton(onPressed: (){}, child: Text('Forgot password?'),
-                 ),
 
-               ],
-             ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(onPressed: (){}, child: Text('SIGN IN'),
-                  ),
+              SizedBox(
+                height:40.0 ,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0,),
+                  color: Colors.black,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(onPressed: (){}, child:
+                    Text('                                      SIGN IN                                         '),
+                    ),
 
-                ],
+                  ],
+                ),
               ),
               SizedBox(
                 height:100.0 ,
@@ -114,9 +121,7 @@ class LoginScreen extends StatelessWidget
                   ),
                 ],
               ),
-              SizedBox(
-                height:40.0 ,
-              ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
